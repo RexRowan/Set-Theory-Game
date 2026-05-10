@@ -1,0 +1,4 @@
+intro x h
+rw [mem_union]
+apply Or.inr
+exact h
