@@ -1,0 +1,10 @@
+apply Iff.intro
+intro h1 s h2
+intro x h3
+have h4 := h1 h3
+rw [mem_sInter] at h4
+exact h4 s h2
+intro h1 x h2
+rw [mem_sInter]
+intro t h3
+exact h1 t h3 h2
