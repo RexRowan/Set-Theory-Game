@@ -1,0 +1,24 @@
+ext x
+constructor
+intro h
+rcases h with hAB | hC
+rcases hAB with hA | hB
+left
+exact hA
+right
+left
+exact hB
+right
+right
+exact hC
+intro h
+rcases h with hA | hBC
+left 
+left
+exact hA
+rcases hBC with hB | hC
+left 
+right
+exact hB
+right
+exact hC
