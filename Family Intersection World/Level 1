@@ -1,0 +1,4 @@
+intro x h
+rw [mem_sInter] at h
+have hA : A ∈ F → x ∈ A := h A
+exact hA h1
