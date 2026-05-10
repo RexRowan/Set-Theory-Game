@@ -1,0 +1,5 @@
+intro x h
+rw [mem_inter_iff] at h
+constructor
+exact h.right
+exact h.left
