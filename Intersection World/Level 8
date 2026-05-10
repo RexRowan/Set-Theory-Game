@@ -1,0 +1,14 @@
+ext x
+constructor
+intro h
+constructor
+exact h.left.left
+constructor
+exact h.left.right
+exact h.right
+intro h
+constructor
+constructor
+exact h.left
+exact h.right.left
+exact h.right.right
