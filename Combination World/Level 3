@@ -1,0 +1,19 @@
+apply Subset.antisymm
+intro x h
+have hA: x ∈ A := h.left
+rcases h.right with hB | hC
+left
+exact And.intro hA hB
+right
+exact And.intro hA hC
+intro x h
+rcases h with hAB | hAC
+have h : x ∈ B ∪ C
+left
+exact hAB.right
+exact And.intro hAB.left h
+have hA : x ∈ A := hAC.left
+have hBC : x ∈ B ∪ C
+right
+exact hAC.right
+exact And.intro hA hBC
