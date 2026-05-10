@@ -1,0 +1,14 @@
+intro x h2
+by_cases h3: x ∈ A
+exact Or.inl h3
+rw [mem_sInter] at h2
+right
+rw [mem_sInter]
+intro t h4
+have h5 := h1 t h4
+have h6 := h2 (A ∪ t) h5
+rw [mem_union] at h6
+by_contra h7
+rcases h6 with h6 | h6
+exact h3 h6
+exact h7 h6
