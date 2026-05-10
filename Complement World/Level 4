@@ -1,0 +1,11 @@
+apply Subset.antisymm
+intro x h
+rw[mem_compl_iff] at h
+rw[mem_compl_iff] at h
+push_neg at h
+exact h
+intro x h
+rw[mem_compl_iff]
+rw[mem_compl_iff]
+push_neg
+exact h
