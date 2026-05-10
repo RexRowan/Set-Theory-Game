@@ -1,0 +1,8 @@
+intro x h
+rw [mem_union]
+rw [mem_union] at h
+rcases h with hA | hB
+apply Or.inr
+exact hA
+apply Or.inl
+exact hB
