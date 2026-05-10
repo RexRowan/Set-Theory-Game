@@ -1,0 +1,22 @@
+apply Subset.antisymm
+intro x h
+constructor
+rw [mem_compl_iff] at h
+by_contra h2
+rw [mem_compl_iff] at h2
+push_neg at h2
+rw [mem_union] at h
+push_neg at h
+exact h.left h2
+rw [mem_compl_iff] at h
+rw [mem_union] at h
+push_neg at h
+rw [mem_compl_iff]
+exact h.right
+intro x h
+rw [mem_compl_iff, mem_union]
+push_neg
+rw [mem_inter_iff] at h
+rw [mem_compl_iff] at h
+rw [mem_compl_iff] at h
+exact h
