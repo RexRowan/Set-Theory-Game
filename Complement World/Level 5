@@ -1,0 +1,7 @@
+apply Iff.intro
+exact compl_subset_compl_of_subset
+intro h
+apply compl_subset_compl_of_subset at h
+rw[compl_compl] at h
+rw[compl_compl] at h
+exact h
