@@ -1,0 +1,19 @@
+ext
+rw [mem_sInter, mem_inter_iff, mem_sInter, mem_sInter]
+constructor
+intro h
+constructor
+intro t h2
+have h3 : t ∈ F ∪ G
+rw [mem_union]
+exact Or.inl h2
+exact h t h3
+intro t h2
+have h3: t ∈ F ∪ G
+rw [mem_union]
+exact Or.inr h2
+exact h t h3
+intro h1 t h2
+rcases h2 with hF | hG
+exact h1.left t hF
+exact h1.right t hG
