@@ -1,0 +1,27 @@
+ext 
+rw [mem_sUnion]
+constructor
+intro h1
+rcases h1 with hA | hB
+use A
+apply And.intro
+rw [mem_pair]
+left
+rfl
+exact hA
+use B
+constructor
+rw [mem_pair]
+right
+rfl
+exact hB
+intro h1
+obtain ⟨s, hs⟩ := h1
+rw [mem_pair] at hs
+rcases hs.left with hA | hB
+rw [hA] at hs
+left
+exact hs.right
+rw [hB] at hs
+right
+exact hs.right
