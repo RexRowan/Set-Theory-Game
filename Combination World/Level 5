@@ -1,4 +1,9 @@
 intro x h
 have h3: x ∈ A ∪ C
-apply Or.inl
-exact h
+apply Or.inl h
+have h4: x ∈ B ∪ C := h1 h3
+rcases h4 with h4 | h4
+exact h4
+have h5 : x ∈ A ∩ C := And.intro h h4
+have h6: x ∈ B ∩ C := h2 h5
+exact h6.left
