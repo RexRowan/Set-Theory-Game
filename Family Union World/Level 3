@@ -1,0 +1,8 @@
+intro x h
+rw [mem_sUnion] at h
+obtain ⟨w, hw⟩ := h
+have h2: w ∈ G := h1 hw.left
+rw [mem_sUnion]
+
+apply Exists.intro w
+exact And.intro h2 hw.right
