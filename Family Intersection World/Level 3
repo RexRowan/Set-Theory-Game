@@ -1,0 +1,21 @@
+ext
+rw [mem_inter_iff]
+rw [mem_sInter]
+apply Iff.intro
+intro h1 t h2
+rw [mem_pair] at h2
+rcases h2 with hA | hB
+rw [hA]
+exact h1.left
+rw [hB]
+exact h1.right
+intro h1
+have h2 : A ∈ {A, B}
+rw [mem_pair]
+left
+rfl
+have h3 : B ∈ {A, B}
+rw [mem_pair]
+right
+rfl
+exact And.intro (h1 A h2) (h1 B h3)
