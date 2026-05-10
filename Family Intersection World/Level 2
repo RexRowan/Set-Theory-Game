@@ -1,0 +1,5 @@
+intro x h
+rw [mem_sInter] 
+intro t h2
+rw [mem_sInter] at h
+exact h t (h1 h2)
