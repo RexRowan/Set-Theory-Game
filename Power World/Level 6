@@ -1,0 +1,6 @@
+induction n with d hd
+rw[add_zero, pow_zero, mul_one]
+rfl
+rw[pow_succ,succ_eq_add_one,← add_assoc, ← succ_eq_add_one]
+rw[pow_succ, hd, mul_assoc]
+rfl
