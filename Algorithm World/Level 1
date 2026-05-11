@@ -1,0 +1,4 @@
+rw[add_comm, ← add_assoc, add_assoc]
+nth_rewrite 2 [add_comm]
+rw[add_assoc]
+rfl
